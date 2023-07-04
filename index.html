@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fellfarben Rechner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="grid-container">
+
+    <div class="text-container">
+      <p class="instructions">
+      Wähle den Genotyp von zwei Hunden für jeden Lokus. Klicke auf den Welpen-Button um einen möglichen (zufälligen) Welpen aus
+      dieser Verpaarung anzuzeigen.<br>
+      Klicke mehrmals um andere mögliche Ergebnisse zu zeigen.
+      </p>
+      <p class="instructions">
+      Das Ergebnis bleibt immer gleich? Es gibt drei mögliche Ursachen:<br>
+      1. Nur reinerbige Optionen wurden gewählt, es gibt nur eine mögliches Ergebnis.<br>
+      2. Eine mischerbige Option wurde gewählt, ist aber rezessiv und wird daher nie ausgedrückt (Beispiel: reinerbig schwarz (B/B) + schwarz, trägt braun (B/b) = Welpe ist immer schwarz, trägt zu 50% das rezessive Gen für Braun)<br>
+      3. Andere Ergebnisse sind zwar möglich, es wurde aber zufällig nochmal das gleiche Ergebnis generiert.<br>
+    </p>
+    </div>
+
+<div class="main-container">
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Lokus</th>
+          <th>Hund 1</th>
+          <th>Hund 2</th>
+        </tr>
+        <tr>
+          <th>S-Lokus</th>
+          <td>
+            <select name="s-lokus" id="s-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="S">S (keine Weißscheckung)</option>
+                <option value="si">si(Weißscheckung Irish Spotting)</option>
+                <option value="sp">sp (Weißscheckung Piebald)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="S, si">S/si (keine oder minimale Weißscheckung)</option>
+                <option value="S, sp">S/sp (Pseudo-Irish)</option>
+                <option value="si, sp">si/sp (Flashy Irish)</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="s-lokus" id="s-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="S">S (keine Weißscheckung)</option>
+                <option value="si">si (Weißscheckung Irish Spotting)</option>
+                <option value="sp">sp (Weißscheckung Piebald)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="S, si">S/si (keine oder minimale Weißscheckung)</option>
+                <option value="S, sp">S/sp (Pseudo-Irish)</option>
+                <option value="si, sp">si/sp (Flashy Irish)</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>E-Lokus</th>
+          <td>
+            <select name="e-lokus" id="e-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="Em">Maske</option>
+                <option value="E">kein Effekt</option>
+                <option value="e">rezessives Rot</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="Em, e">Maske, trägt rezessives rot</option>
+                <option value="Em, E">Maske,trägt Wildtyp</option>
+                <option value="E, e">Wildtyp, trägt rezessives Rot</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="e-lokus" id="e-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="Em">Maske</option>
+                <option value="E">kein Effekt</option>
+                <option value="e">rezessives Rot</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="Em, e">Maske, trägt rezessives rot</option>
+                <option value="Em, E">Maske,trägt Wildtyp</option>
+                <option value="E, e">Wildtyp, trägt rezessives Rot</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>K-Lokus</th>
+          <td>
+            <select name="k-lokus" id="k-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="KB">K (keine Ausprägung der A-Serie)</option>
+                <option value="KBr">Kbr (Ausprägung der A-Serie + Stromung)</option>
+                <option value="ky">ky (Ausprägung der A-Serie)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="KB, KBr">K, trägt Stromung</option>
+                <option value="KB, ky">K, trägt ky</option>
+                <option value="KBr, ky">Stromung, trägt ky</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="k-lokus" id="k-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="KB">K (keine Ausprägung der A-Serie)</option>
+                <option value="KBr">Kbr (Ausprägung der A-Serie + Stromung)</option>
+                <option value="ky">ky (Ausprägung der A-Serie)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="KB, KBr">K, trägt Stromung</option>
+                <option value="KB, ky">K, trägt ky</option>
+                <option value="KBr, ky">Stromung, trägt ky</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>A-Lokus</th>
+          <td>
+            <select name="a-lokus" id="a-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="As">Ay (Zobel)</option>
+                <option value="Aw">Aw (Agouti (Wolkung, Wolfsgrau))</option>
+                <option value="at">At (Tanmarken (Schwarz & Brand/Loh))</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="As, Aw">Zobel, trägt Agouti</option>
+                <option value="As, at">Zobel, trägt Tanmarken</option>
+                <option value="Aw, at">Agouti, trägt Tanmarken</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="a-lokus" id="a-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="As">Ay (Zobel)</option>
+                <option value="Aw">Aw (Agouti (Wolkung, Wolfsgrau))</option>
+                <option value="at">At (Tanmarken (Schwarz & Brand/Loh))</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="As, Aw">Zobel, trägt Agouti</option>
+                <option value="As, at">Zobel, trägt Tanmarken</option>
+                <option value="Aw, at">Agouti, trägt Tanmarken</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>B-Lokus</th>
+          <td>
+            <select name="b-lokus" id="b-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="B">Schwarz</option>
+                <option value="b">Braun</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="B, b">Schwarz, trägt Braun</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="b-lokus" id="b-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="B">Schwarz</option>
+                <option value="b">Braun</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="B, b">Schwarz, trägt Braun</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>D-Lokus</th>
+          <td>
+            <select name="d-lokus" id="d-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="D">keine Verdünnung</option>
+                <option value="d">Verdünnung</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="D, d">trägt Verdünnung</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="d-lokus" id="d-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="D">keine Verdünnung</option>
+                <option value="d">Verdünnung</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="D, d">trägt Verdünnung</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>I-Lokus</th>
+          <td>
+            <select name="i-lokus" id="i-lokus-dog1">
+              <optgroup label="reinerbig">
+                <option value="I">dunkles Phäomelanin (rot)</option>
+                <option value="i">helles Phäomelanin (creme)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="I, i">mittleres Phäomelanin (orange)</option>
+              </optgroup>
+            </select>
+          </td>
+          <td>
+            <select name="i-lokus" id="i-lokus-dog2">
+              <optgroup label="reinerbig">
+                <option value="I">dunkles Phäomelanin (rot)</option>
+                <option value="i">helles Phäomelanin (creme)</option>
+              </optgroup>
+              <optgroup label="mischerbig">
+                <option value="I, i">mittleres Phäomelanin (orange)</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <button id="generate-btn">Welpen-Button</button>
+   
+    <div class="img-container"></div>
+
+    <p id="genotype-text"></p>
+  </div>
+  </div>
+      
+  <script type="module" src="coat-calculator.js"></script>
+  <script type="module" src="input.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: rgb(210, 210, 210);
+}
+
+.grid-container {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+
+.main-container {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 6px;
+  background-color: rgb(196, 178, 166);
+}
+
+select {
+  width: 100%;
+}
+
+button {
+  color: white;
+  background-color: darkslategray;
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100px;
+}
+
+.img-container {
+  position: relative;
+  width: 296px;
+  height: 206px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: black;
+  background-color: rgb(196, 178, 166);
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-container {
+  order: 2;
+}
+
+.instructions {
+  line-height: 23px;
+}
+
+@media (min-width: 1400px){
+.instructions {
+  max-width: 66%;
+}
+}
+
+  /* für mobile Screens */
+@media (max-width: 769px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .text-container {
+    order: 1;
+  }
+
+  .main-container {
+    order: 2;
+  }
+}
