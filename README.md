@@ -53,14 +53,15 @@ Du kannst den Button wiederholt klicken um andere mögliche Ergebnisse zu zeigen
 ### Illustrationen
 Die Illustrationen wurden von mir erstellt. Ich bin kein Künstler, darum sehen manche etwas merkwürdig aus. 
 Bei schwarzen Tanmarken in Kombination mit Stromung zeigt sich die Stromung leider auf den schwarzen Bereichen. Ich weiß nicht, warum das nur bei Schwarz der Fall ist.
+
 ![Fehlerhafte Illustration: Stromung auf schwarzen Tanmarken](https://github.com/lisa-pan/coat-calculator/assets/132587189/e5a6ed2b-cf2a-4c15-8bf6-0a2d2a2f0eb6)
 
 Sobald ich rausfinde, wie ich das beheben kann, werde ich die entsprechenden Bilder aktualisieren. 
 
 ### In der Realität...
 Der Rechner basiert auf echter Genetik, ist aber in vielen Bereichen vereinfacht. 
-Wer mehr über das Thema erfahren möchte kann auf [doggenetics.co.uk](http://doggenetics.co.uk/index.htm) mehr erfahren oder
-sich mein anderes Projekt, die [Fellfarben-Galerie](https://lisa-pan.github.io/color-gallery/), anschauen. :smiley:
+Wer mehr über das Thema erfahren möchte kann das auf [doggenetics.co.uk](http://doggenetics.co.uk/index.htm) oder
+sieht sich einfach mein anderes Projekt, die [Fellfarben-Galerie](https://lisa-pan.github.io/color-gallery/), an. :smiley:
 
 Am stärksten vereinfacht wurde die Bestimmung der Phäomelanin-Farbe auf dem I-Lokus. 
 In der Realität wurden bisher Gene auf 5 verschiedenen Loki identifiziert, die Einfluss auf die Intensität des Phäomelanin-Pigments haben. Wahrscheinlich existieren noch weitere, da auch
