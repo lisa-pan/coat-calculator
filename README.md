@@ -14,7 +14,7 @@ Wähle für den **I-Lokus** bei beiden Hund **helles Phäomelanin (creme)** aus.
 Wähle jetzt für beide Hunde die letzte mischerbige Option auf dem **E-Lokus**, also: **Wildtyp, trägt rezessives Rot (E/e)**. 
 Zuletzt noch die mischerbige Option auf dem **B-Lokus**: **Schwarz, trägt Braun (B/b)**.
 Alles andere bleibt auf default.
-Das Ergebnis wird zu 9/16 schwarz, 1/4 braun, 1/4 blond mit schwarzer Nase, und 1/16 blond mit brauner Nase sein.
+Das Ergebnis wird zu 9/16 schwarz, 3/16 braun, 3/16 blond mit schwarzer Nase, und 1/16 blond mit brauner Nase sein.
 
 ![Screenshot des Labrador-Beispiels](https://github.com/lisa-pan/coat-calculator/assets/132587189/fbc06c05-13c0-420b-ab17-8baba0a5a3d3)
 
